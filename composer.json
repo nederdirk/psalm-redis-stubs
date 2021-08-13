@@ -1,0 +1,37 @@
+{
+    "name": "nederdirk/psalm-redis-stubs",
+    "description": "Function signatures for the phpredis PECL package",
+    "type": "psalm-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nederdirk\\PsalmRedisStubs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dirk Nederveen",
+            "email": "dirk@zwartgeel.nl"
+        }
+    ],
+    "require": {
+        "vimeo/psalm": "^4",
+        "ukko/phpredis-phpdoc": "5.0.1-beta8"
+    },
+    "extra": {
+        "psalm" : {
+            "pluginClass": "Nederdirk\\PsalmRedisStubs\\Plugin"
+        }
+    },
+    "config": {
+        "lock": false
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "slevomat/coding-standard": "^7.0"
+    },
+    "scripts": {
+        "phpcs": "phpcs src",
+        "psalm": "psalm"
+    }
+}
